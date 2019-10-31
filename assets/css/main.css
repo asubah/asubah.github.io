@@ -31,3 +31,7 @@ a {
   text-decoration: none;
   color: #212121;
 }
+
+hr {
+  border: 1px solid #d4d4d4;
+}
