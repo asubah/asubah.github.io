@@ -10,7 +10,7 @@ layout: default
     </a>
   </h2>
   
-  <p>{{ post.excerpt | truncatewords: 50 }}</p>
+  <p>{{ post.excerpt | truncatewords: 50 }} <a href='{{ site.url }}{{ post.url }}'> المزيد</a></p>
 </section>       
 {% endfor %}
 
