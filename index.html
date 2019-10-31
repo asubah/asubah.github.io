@@ -14,13 +14,15 @@ layout: default
 </section>       
 {% endfor %}
 
+<div style="text-align: center;">
 {% if paginator.previous_page %}
-<a href='{{ site.url }}{{ paginator.previous_page_path }}'>Previous</a>
+<a href='{{ site.url }}{{ paginator.previous_page_path }}'>السابق</a>
 {% endif %}
 
-&mdash; {{ paginator.page }} of {{ paginator.total_pages }} &mdash;
+
+&mdash; الصفحة {{ paginator.page }} من {{ paginator.total_pages }} &mdash;
 
 {% if paginator.next_page %}
-<a href='{{ site.url }}{{ paginator.next_page_path }}'>Next</a>
+<a href='{{ site.url }}{{ paginator.next_page_path }}'>التالي</a>
 {% endif %}
-
+</div>
