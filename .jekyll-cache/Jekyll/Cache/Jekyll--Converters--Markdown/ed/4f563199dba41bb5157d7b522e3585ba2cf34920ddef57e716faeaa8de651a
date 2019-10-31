@@ -1,0 +1,100 @@
+I"�<p>بسم الله الرحمن الرحيم، الحمد لله والصلاة والسلام على رسول الله وعلى آله وصحبه وسلم.</p>
+
+<p>هذه آلية مبسطة لاستخدام أوامر <code class="highlighter-rouge">Git</code> لها الفوائد التالية:</p>
+
+<ul>
+  <li>بساطتها وسهولة التراجع عن بعض أوامرها.</li>
+  <li>اعتمادها أو شيء مقارب لها من قبل فرق برمجية  متعددة.</li>
+  <li>الفصل بين عمليات التطوير في فروع <code class="highlighter-rouge">(Branches)</code> مختلفة لتقليل التعارض <code class="highlighter-rouge">(Conflict)</code>.</li>
+  <li>مركزية الجمع بين الفروع، بحيث من الممكن تعيين شخص للجمع بين الفروع ودمجها <code class="highlighter-rouge">(Merge)</code> في حال وجود تعارض.</li>
+</ul>
+
+<p>نفترض بداية وجود حزمة <code class="highlighter-rouge">(Repository)</code>للمشروع البرمجي ونحن بداخل مجلدها.</p>
+
+<hr />
+<h3 id="1-النسخ-fork">1. النسخ <code class="highlighter-rouge">(Fork)</code></h3>
+
+<p>قم بعمل نسخ <code class="highlighter-rouge">(Fork)</code> للمشروع الذي تريد المساهمة فيه. هذه الخطوة تختلف باختلاف منصة <code class="highlighter-rouge">Git</code> اللتي تستخدمها مثل <code class="highlighter-rouge">GitHub</code>، <code class="highlighter-rouge">GitLab</code>، و <code class="highlighter-rouge">Bitbucket</code>.</p>
+
+<hr />
+<h3 id="2-التنزيل-clone">2. التنزيل <code class="highlighter-rouge">(Clone)</code></h3>
+
+<p>قم بتنزل نسختك الخاصة من المشروع إلى جهازك الخاص بالتطوير وذلك باستخدام الأمر التالي:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git clone link-to-repository
+</code></pre></div></div>
+
+<p>بحيث يكون <code class="highlighter-rouge">link-to-repository</code> هو رابط المشروع على حسابك.</p>
+
+<hr />
+<h3 id="3-التفريع-branch">3. التفريع <code class="highlighter-rouge">(Branch)</code></h3>
+
+<p>قم بانشاء فرع خاص بالتحديث الذي تريد تطويره:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git branch branch-name
+</code></pre></div></div>
+
+<p>بحيث يكون <code class="highlighter-rouge">branch-name</code> هو اسم الفرع الذي تريد تطويره، ويفضل أن يكون مطابق للخاصية المضافة.</p>
+
+<p>بعدها قم بالانتقال إلى الفرع الجديد:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git checkout branch-name
+</code></pre></div></div>
+
+<p>يمكن اختصار الخطوتين الماضيتين في في خطوة واحدة:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git checkout <span class="nt">-b</span> branch-name
+</code></pre></div></div>
+
+<p>العلامة <code class="highlighter-rouge">b-</code> تخبر البرنامج بإنشاء الفرع في حال عدم وجوده.</p>
+
+<hr />
+<h3 id="4--الإضافة-add">4.  الإضافة <code class="highlighter-rouge">(Add)</code></h3>
+
+<p>بعد إجراء التعديلات قم بإضافة الملفات الجديدة، في حال لم يكن هناك ملفات جديدة انتقلل للأمر القادم:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git add <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>النقطة في نهاية سطر الأمر تقوم بإضافة جميع الملفات الجديدة إلى حزمة المشروع <code class="highlighter-rouge">(Repository)</code>. في حال الرغبة في إضافة ملفات معينة عليك استبدال النقطة بأسماء الملفات اللتي ترغب بإضافتها.</p>
+
+<h3 id="5-التثبيت-commit">5. التثبيت <code class="highlighter-rouge">(Commit)</code></h3>
+<p>بعد إضافة الملفات قم بتثبيت التحديثات في الملفات التي تم تعديلها:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git commit <span class="nt">-am</span> <span class="s2">"commit message"</span>
+</code></pre></div></div>
+
+<p>تأكد من إضافة رسالة مفيدة لتبين سبب إجراء التحديث.</p>
+
+<p>بالإمكان تثبيت التحديثات بشكل منفرد في كل ملف على حدى:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git commit file-name <span class="nt">-m</span> <span class="s2">"commit message"</span>
+</code></pre></div></div>
+<hr />
+<h3 id="6-الرفع-push">6. الرفع <code class="highlighter-rouge">(Push)</code></h3>
+
+<p>بعد التثبيت قم بإنشاء الفرع الجديد على المنصة ورفع التحديثات إليه:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git push <span class="nt">--set-upstream</span> origin branch-name
+</code></pre></div></div>
+<hr />
+<h3 id="7-طلب-السحب-pull-request">7. طلب السحب <code class="highlighter-rouge">(Pull Request)</code></h3>
+
+<p>من خلال المنصة المستخدمة قم بطلب سحب <code class="highlighter-rouge">(pull request)</code> لفرعك <code class="highlighter-rouge">(branch)</code> ليصبح من ضمن الحزمة <code class="highlighter-rouge">(repository)</code> الرئيسة. تختلف هذه العملية من منصة إلى أخرى.</p>
+
+<h3 id="8-الدمج-merge">8. الدمج <code class="highlighter-rouge">(Merge)</code></h3>
+
+<p>مدير الحزمة <code class="highlighter-rouge">(repository)</code> الرئيسة سيستلم طلب السحب <code class="highlighter-rouge">(pull request)</code>، وعليه يقوم بمراجعة الإضافة أو التعديل الجديد ثم يقوم بدمجه <code class="highlighter-rouge">(merge)</code> مع الفرع الرئيس <code class="highlighter-rouge">(master)</code>. مجددا تختلف هذه الخطوة من منصة إلى أخرى.</p>
+
+<hr />
+<h3 id="ملخص-الأوامر">ملخص الأوامر</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git clone link-to-repository
+   git checkout <span class="nt">-b</span> branch-name
+   <span class="c"># develop new feature or fix some issues</span>
+   git add <span class="nb">.</span> <span class="c"># add files if needed</span>
+   git commit <span class="nt">-am</span> <span class="s2">"commit message"</span>
+   git push <span class="nt">--set-upstream</span> origin branch-name
+</code></pre></div></div>
+
+:ET

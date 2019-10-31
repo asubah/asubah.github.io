@@ -1,4 +1,4 @@
-name: "Jekyll true minimal theme"
+name: "رقميــ11001ــات"
 description: "Lightweight theme"
 
 url: '' 
@@ -26,3 +26,4 @@ sass:
     style: :compressed
     sass_dir: assets/css/
 
+excerpt_separator: "<!-- more -->"

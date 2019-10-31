@@ -10,7 +10,7 @@ layout: default
     </a>
   </h2>
   
-  <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>
+  <p>{{ post.excerpt | truncatewords: 50 }}</p>
 </section>       
 {% endfor %}
 
