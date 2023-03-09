@@ -8,3 +8,7 @@ body {
 title, h1, h2, h3, h4, h5, h6, .main-menu {
   font-family: 'Noto Naskh Arabic', serif;
 }
+
+code {
+  direction: ltr;
+}
