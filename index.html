@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبد الله إبراهيم صباح | Abdulla Ebrahim Subah</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        img {
+            border-radius: 50%;
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .lang-ar {
+            font-family: 'Noto Naskh Arabic', serif;
+            direction: rtl;
+        }
+
+        .social-links, .name {
+           text-align: center; 
+        }
+
+    </style>
+    <script>
+        function changeLanguage(lang) {
+            const enElements = document.querySelectorAll('.lang-en');
+            const arElements = document.querySelectorAll('.lang-ar');
+            const arBtn = document.querySelectorAll('.btn-ar');
+            const enBtn = document.querySelectorAll('.btn-en');
+            if (lang === 'en') {
+                enElements.forEach(el => el.style.display = 'block');
+                arElements.forEach(el => el.style.display = 'none');
+                arBtn.forEach(el => el.style.display = 'block');
+                enBtn.forEach(el => el.style.display = 'none');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                arElements.forEach(el => el.style.display = 'block');
+                arBtn.forEach(el => el.style.display = 'none');
+                enBtn.forEach(el => el.style.display = 'block');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+      <article>
+      <header>
+        <div class="row">
+            <div class="col">
+                <img src="photo.jpg" alt="الوجه  الصبوح" style="max-width:200;">
+                <h1 class="name lang-ar">عبد الله إبراهيم صباح</h1>
+                <h1 class="name lang-en" style="display:none">Abdulla Ebrahim Subah</h1>
+            </div>
+        </div>
+      </header>
+
+        <div class="row">
+            <div class="col lang-ar" style="display:block;">
+                <p>مسلم بحريني، مختص في علم الحاسوب. عملت سابقًا محلل نظم ومطور، ولكن شغفي بالبحث العلمي دفعني للانتقال إلى العمل الأكاديمي في جامعة البحرين. حاليًا، أحضر الدكتوراه في نفس الجامعة، وأشارك في اللجنة الإدارية لمختبر "بنفت" للذكاء الاصطناعي والحوسبة. أساهم أيضًا بوقتي كعضو متطوع في جمعية الشباب والتكنولوجيا، مهتم بتكنولوجيا المصدر المفتوح والحوسبة عالية الأداء والذكاء الاصطناعي. أسعى لتقديم مساهمات مثمرة في مجالاتي وخدمة مجتمعي.
+</p>
+            </div>
+            <div class="col lang-en" style="display:none;">
+                <p>I'm a Muslim from Bahrain with a background in Computer Science. Initially working as a Systems Analyst and Developer, my passion for research led me to academia, where I'm currently pursuing a Ph.D. at the University of Bahrain. Additionally, I’m part of the management committee at the "Benefit Advanced AI and Computing Lab," focusing on designing the lab’s computing cluster and handling system administration. I also volunteer as a board member of the YouthTech Society in Bahrain. My interests include open-source technology, high-performance computing, and AI, and I'm dedicated to contributing to these fields and serving my community.</p>
+            </div>
+        </div>
+
+      <footer>
+            <div class="col lang-ar" style="display:block;">
+                <div class="social-links">
+                    <a href="https://github.com/asubah" target="_blank">جيتهب</a> |
+                    <a href="https://linkedin.com/in/abdulla-ebrahim-subah-454787227/" target="_blank">لينكدإن</a> |
+                    <a href="https://twitter.com/AbdullaSubah" target="_blank">تويتر</a> |
+                    <a href="https://scholar.google.com/citations?hl=ar&user=aPXyf6MAAAAJ" target="_blank">الباحث العلمي</a> |
+                    <a href="mailto:abdulla.e.subah@gmail.com" target="_blank">بريد</a> 
+                </div>
+            </div>
+            <div class="col lang-en" style="display:none;">
+                <div class="social-links">
+                    <a href="https://github.com/asubah" target="_blank">GitHub</a> |
+                    <a href="https://linkedin.com/in/abdulla-ebrahim-subah-454787227/" target="_blank">LinkedIn</a> |
+                    <a href="https://twitter.com/AbdullaSubah" target="_blank">Twitter</a> |
+                    <a href="https://scholar.google.com/citations?hl=ar&user=aPXyf6MAAAAJ" target="_blank">Google Scholar</a> |
+                    <a href="mailto:abdulla.e.subah@gmail.com" target="_blank">Email</a> 
+                </div>
+            </div>
+        <div class="row language-switcher">
+            <div class="col">
+                <button class="secondary btn-ar" style="display:none" onclick="changeLanguage('ar')">العربية</button>
+                <button class="secondary btn-en" style="display:inline-block" onclick="changeLanguage('en')">English</button>
+            </div>
+        </div>
+      </footer>
+      </article>
+    </div>
+</body>
+
+</html>
+
